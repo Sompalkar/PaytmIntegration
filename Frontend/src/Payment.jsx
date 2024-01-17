@@ -51,7 +51,7 @@ function Payment() {
 
   const updateTransactionStatus = async (orderId, status) => {
     try {
-      await axios.post("http://localhost:3000/updateStatus", {
+      await axios.post("/updateStatus", {
         orderId,
         status,
       });
@@ -65,7 +65,7 @@ function Payment() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/payment",
+        "/payment",
         postData
       );
 
